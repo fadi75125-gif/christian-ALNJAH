@@ -1,2 +1,118 @@
-# christian-ALNJAH
-This is test Tist
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إختبار التربية المسيحية الموسع</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; direction: rtl; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        header { text-align: center; border-bottom: 3px solid #2c3e50; margin-bottom: 30px; padding-bottom: 10px; }
+        h1 { color: #2c3e50; margin-bottom: 5px; }
+        .student-info { background: #e9ecef; padding: 20px; border-radius: 8px; margin-bottom: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .student-info input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; width: 90%; }
+        .question-block { margin-bottom: 25px; padding: 15px; border-right: 5px solid #d4af37; background: #fafafa; border-radius: 0 5px 5px 0; }
+        .question-text { font-weight: bold; display: block; margin-bottom: 15px; font-size: 18px; color: #2c3e50; }
+        .options label { display: block; padding: 10px; cursor: pointer; transition: 0.3s; border-radius: 4px; }
+        .options label:hover { background: #d4af3722; }
+        textarea { width: 100%; height: 100px; margin-top: 10px; border: 1px solid #ccc; border-radius: 4px; padding: 10px; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #2c3e50; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        button:hover { background: #1a252f; }
+        footer { text-align: center; margin-top: 30px; color: #777; font-size: 13px; }
+        @media (max-width: 600px) { .student-info { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>مسابقة التربية الدينية المسيحية</h1>
+        <p>أجب على الأسئلة التالية وسيتم إرسال نتيجتك للمعلم</p>
+    </header>
+
+    <!-- تذكر وضع إيميلك مكان كلمة YOUR_EMAIL_HERE -->
+    <form action="formspree.io" method="POST">
+        
+        <div class="student-info">
+            <div>
+                <label>اسم الطالب:</label><br>
+                <input type="text" name="اسم الطالب" required>
+            </div>
+            <div>
+                <label>المرحلة الدراسية:</label><br>
+                <input type="text" name="المرحلة" required>
+            </div>
+        </div>
+
+        <!-- سؤال 1 -->
+        <div class="question-block">
+            <span class="question-text">س1: مَن هو كاتب سفر الرؤيا؟</span>
+            <div class="options">
+                <label><input type="radio" name="Q1" value="بولس" required> القديس بولس</label>
+                <label><input type="radio" name="Q1" value="يوحنا الحبيب"> القديس يوحنا الحبيب</label>
+                <label><input type="radio" name="Q1" value="لوقا"> القديس لوقا</label>
+            </div>
+        </div>
+
+        <!-- سؤال 2 -->
+        <div class="question-block">
+            <span class="question-text">س2: ما هي أول معجزة صنعها السيد المسيح؟</span>
+            <div class="options">
+                <label><input type="radio" name="Q2" value="إشباع الجموع" required> إشباع الجموع</label>
+                <label><input type="radio" name="Q2" value="تحويل الماء لخمر"> تحويل الماء إلى خمر في عرس قانا الجليل</label>
+                <label><input type="radio" name="Q2" value="شفاء الأعمى"> شفاء الرجل الأعمى</label>
+            </div>
+        </div>
+
+        <!-- سؤال 3 -->
+        <div class="question-block">
+            <span class="question-text">س3: مَن هو النبي الذي ابتلعه الحوت وظل في بطنه 3 أيام؟</span>
+            <div class="options">
+                <label><input type="radio" name="Q3" value="يونان" required> يونان النبي</label>
+                <label><input type="radio" name="Q3" value="دانيال"> دانيال النبي</label>
+                <label><input type="radio" name="Q3" value="داود"> داود النبي</label>
+            </div>
+        </div>
+
+        <!-- سؤال 4 (كتابي) -->
+        <div class="question-block">
+            <span class="question-text">س4: اذكر الآية التي تقول "هكذا أحب الله العالم حتى بذل..." وأكملها؟</span>
+            <textarea name="Q4-كتابي" required placeholder="اكتب الآية هنا مكملة..."></textarea>
+        </div>
+
+        <!-- سؤال 5 -->
+        <div class="question-block">
+            <span class="question-text">س5: كم عدد تلاميذ السيد المسيح؟</span>
+            <div class="options">
+                <label><input type="radio" name="Q5" value="7" required> 7 تلاميذ</label>
+                <label><input type="radio" name="Q5" value="12"> 12 تلميذ</label>
+                <label><input type="radio" name="Q5" value="40"> 40 تلميذ</label>
+            </div>
+        </div>
+
+        <!-- سؤال 6 (كتابي) -->
+        <div class="question-block">
+            <span class="question-text">س6: ماذا نتعلم من قصة "السامري الصالح"؟ (اكتب باختصار)</span>
+            <textarea name="Q6-مقالي" required placeholder="اكتب الدروس المستفادة..."></textarea>
+        </div>
+
+        <!-- سؤال 7 -->
+        <div class="question-block">
+            <span class="question-text">س7: ما هو أطول سفر في الكتاب المقدس؟</span>
+            <div class="options">
+                <label><input type="radio" name="Q7" value="التكوين" required> سفر التكوين</label>
+                <label><input type="radio" name="Q7" value="المزامير"> سفر المزامير</label>
+                <label><input type="radio" name="Q7" value="أشعياء"> سفر أشعياء</label>
+            </div>
+        </div>
+
+        <button type="submit">إرسال الإجابات إلى المعلم</button>
+    </form>
+
+    <footer>
+        © 2025 منصة التعليم المسيحي الرقمية
+    </footer>
+</div>
+
+</body>
+</html>
